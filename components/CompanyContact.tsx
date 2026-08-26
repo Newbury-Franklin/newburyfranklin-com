@@ -3,12 +3,12 @@ import type { Company } from "@/lib/companies";
 
 export default function CompanyContact({ company }: { company: Company }) {
   return (
-    <div id="contact" className="scroll-mt-24">
-      <h3 className="mb-2 text-3xl text-black sm:text-4xl">Contact Us</h3>
-      <p className="mb-10 max-w-xl text-stone">
+    <div id="contact" className="scroll-mt-24 text-center">
+      <h3 className="mb-2 text-3xl text-black sm:text-4xl">Contact Us.</h3>
+      <p className="mx-auto mb-10 max-w-xl text-stone">
         {company.shortName} is looking to acquire and scale businesses with growth potential. Let’s talk.
       </p>
-      <div className="flex flex-col gap-8 sm:flex-row sm:gap-16">
+      <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-center sm:gap-16">
         <a href={`mailto:${company.contactEmail}`} className="group flex items-center gap-4">
           <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy">
             <div className="relative h-5 w-5">

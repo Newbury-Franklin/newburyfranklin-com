@@ -50,3 +50,6 @@ next-env.d.ts
 /public/videos/Coffee.mp4
 /public/videos/early education.mp4
 /public/videos/performance-arts-hero.mp4
+
+.vercel
+.env*

@@ -67,7 +67,7 @@ export const growthFocus = {
   newAreasIntro:
     "We are also selectively evaluating new verticals with similar business model characteristics, including:",
   newAreas: [
-    { name: "Car Wash Services", slug: "car-wash", lines: ["Car Wash", "Services"] as [string, string] },
+    { name: "Automotive Services", slug: "car-wash", lines: ["Automotive", "Services"] as [string, string] },
     { name: "Early Childhood Education", slug: "early-education", lines: ["Early Childhood", "Education"] as [string, string] },
     { name: "Salon & Barbershop Services", slug: "salon-barbershop", lines: ["Salon & Barbershop", "Services"] as [string, string] },
     { name: "Taproom & Craft Beverage", slug: "taproom", lines: ["Taproom & Craft", "Beverage"] as [string, string] },

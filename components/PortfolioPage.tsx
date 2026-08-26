@@ -35,9 +35,9 @@ export default function PortfolioPage({ slug }: { slug: Company["slug"] }) {
 
       <section className="section bg-white">
         <div className="container-page">
-          <Reveal className="mb-14">
+          <Reveal className="mx-auto mb-14 text-center">
             <p className="eyebrow mb-3">Leadership</p>
-            <h3 className="text-3xl text-black sm:text-4xl">Meet Our CEO</h3>
+            <h3 className="text-3xl text-black sm:text-4xl">Meet Our CEO.</h3>
           </Reveal>
           <Reveal delay={100}>
             <CeoCard slug={company.ceoSlug} />

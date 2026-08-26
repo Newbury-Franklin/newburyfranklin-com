@@ -30,14 +30,14 @@ export const companies: Company[] = [
     name: "Newbury Franklin Industrials",
     shortName: "Industrials",
     cardDescription: "Data-Driven Industrial Manufacturing and Distribution Platform",
-    tagline: "Leading manufacturer of consumable industrial components",
+    tagline: "Manufacturer and value-added distributor of industrial parts.",
     logo: "/images/logo/nf-industrials-logo.png",
     cardImage: "/images/backgrounds/industrials-card.jpg",
     hero: { type: "video", src: "/videos/industrials-hero.mp4" },
     about: [
       "Headquartered in Buffalo, NY, Newbury Franklin Industrials is managed by a team of experienced operators with deep expertise scaling businesses both organically and through acquisition. We empower entrepreneurial management teams to focus on what matters most: serving customers and building durable relationships. This approach has allowed us to develop best-in-class relationships with manufacturers, distributors, employees, and customers alike.",
     ],
-    highlightsHeading: "Our Industries",
+    highlightsHeading: "Our Industries.",
     highlights: [
       {
         title: "Fasteners, Hardware & Fittings",
@@ -78,7 +78,7 @@ export const companies: Company[] = [
       "Newbury Franklin Pet Services (“NFPS”) is led by an experienced Nashville-based team building the most trusted pet services platform in the United States.",
       "We partner with pet resort owners seeking to reduce their administrative burden and focus on what matters most: caring for their clients’ pets. NFPS builds on the legacy these owners have created, leveraging technology to improve the customer and employee experience while providing safe, clean, and calm environments for pets to socialize, exercise, and rejuvenate.",
     ],
-    highlightsHeading: "Why NF Pet Services",
+    highlightsHeading: "Why NF Pet Services.",
     highlights: [
       {
         title: "Built With Owners in Mind",
@@ -106,7 +106,7 @@ export const companies: Company[] = [
     name: "Newbury Franklin Early Education",
     shortName: "Early Education",
     cardDescription: "Acquirer and Long-Term Steward of Early Childhood Education Centers",
-    tagline: "Acquirer and long-term steward of early childhood education centers.",
+    tagline: "Long-term steward of early childhood education centers.",
     logo: "/images/logo/nf-earlyeducation-logo.png",
     cardImage: "/images/backgrounds/earlyeducation-card.jpg",
     hero: { type: "video", src: "/videos/earlyeducation-hero.mp4" },
@@ -114,7 +114,7 @@ export const companies: Company[] = [
       "Newbury Franklin Early Education partners with exceptional early childhood education leaders to build enduring organizations that deliver outstanding experiences for children, families, and educators.",
       "We invest in centers with strong reputations for quality and care, providing the operational expertise, technology, and resources to support long-term growth — without compromising the culture and community relationships that made them successful.",
     ],
-    highlightsHeading: "Why NF Early Education",
+    highlightsHeading: "Why NF Early Education.",
     highlights: [
       {
         title: "Operational Excellence",

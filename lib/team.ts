@@ -66,7 +66,7 @@ export const teamMembers: TeamMember[] = [
     name: "Al Franjoine",
     titles: ["CEO, Industrials"],
     cardTitleLines: ["CEO,", "Industrials"],
-    image: "/images/team/al-franjoine.jpg",
+    image: "/images/team/al-franjoine.png",
     isPlaceholderBio: true,
     bio: [
       "Al Franjoine leads Newbury Franklin Industrials, overseeing the firm’s manufacturing and distribution platform across fasteners, hardware, electrical, plastics, and rubber.",

@@ -22,8 +22,8 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <section className="section bg-white">
-        <Reveal className="container-page max-w-2xl">
+      <section className="section relative bg-white/90">
+        <Reveal className="container-page mx-auto max-w-2xl text-center">
           <p className="eyebrow mb-3">Overview</p>
           <h3 className="mb-6 text-3xl text-black sm:text-4xl">What We Do.</h3>
           <p className="mb-5 text-xl font-serif italic leading-relaxed text-navy">{whatWeDo.lede}</p>
@@ -47,6 +47,7 @@ export default function Home() {
         <div className="container-page">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <Reveal>
+              <p className="eyebrow mb-3">Philosophy</p>
               <h3 className="mb-6 text-3xl text-black sm:text-4xl">What We Believe.</h3>
               <p className="mb-5 text-lg font-serif text-navy">{whatWeBelieve.heading}</p>
               <div className="space-y-4 text-stone">
@@ -66,7 +67,7 @@ export default function Home() {
           </div>
 
           <div id="criteria" className="scroll-mt-20 mt-12 border-t border-navy/10 pt-10">
-            <Reveal className="mb-8 max-w-2xl">
+            <Reveal className="mx-auto mb-8 max-w-2xl text-center">
               <p className="eyebrow mb-3">Investment Criteria</p>
               <h3 className="mb-5 text-3xl text-black sm:text-4xl">What We Look For.</h3>
               <p className="text-stone">{investmentCriteria.intro}</p>
@@ -84,7 +85,7 @@ export default function Home() {
       </section>
 
       <section id="portfolio" className="section scroll-mt-20 bg-white">
-        <Reveal className="container-page mb-14">
+        <Reveal className="container-page mb-14 text-center">
           <p className="eyebrow mb-3">Portfolio</p>
           <h3 className="text-3xl text-black sm:text-4xl">Our Companies.</h3>
         </Reveal>
@@ -99,7 +100,7 @@ export default function Home() {
 
       <section id="strategy" className="section scroll-mt-20 bg-navy text-white">
         <div className="container-page">
-          <Reveal className="mb-14 max-w-2xl">
+          <Reveal className="mx-auto mb-14 max-w-2xl text-center">
             <p className="eyebrow mb-3">Growth</p>
             <h3 className="text-3xl sm:text-4xl">Where We&rsquo;re Headed.</h3>
           </Reveal>
@@ -134,7 +135,7 @@ export default function Home() {
 
       <section id="team" className="section scroll-mt-20 bg-cream">
         <div className="container-page">
-          <Reveal className="mb-14">
+          <Reveal className="mx-auto mb-14 text-center">
             <p className="eyebrow mb-3">Leadership</p>
             <h3 className="text-3xl text-black sm:text-4xl">Our Team.</h3>
           </Reveal>
