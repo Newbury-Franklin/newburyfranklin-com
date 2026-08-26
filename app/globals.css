@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-charcoal font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-6 sm:px-8 lg:px-12;
+  }
+  .section {
+    @apply py-20 sm:py-24;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-sm bg-navy px-7 py-3 text-sm font-medium tracking-wide text-white transition-colors hover:bg-navy-600;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-sm border border-white/60 px-7 py-3 text-sm font-medium tracking-wide text-white transition-colors hover:bg-white hover:text-navy;
+  }
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center rounded-sm border border-navy/30 px-7 py-3 text-sm font-medium tracking-wide text-navy transition-colors hover:bg-navy hover:text-white;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-navy;
+  }
+  .input {
+    @apply w-full rounded-sm border border-stone-light/50 bg-white px-3.5 py-2.5 text-sm text-charcoal placeholder:text-stone-light focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy;
+  }
+}

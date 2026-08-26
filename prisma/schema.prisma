@@ -1,0 +1,125 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  INVESTOR
+}
+
+// Mirrors Company["slug"] in lib/companies.ts 1:1 — do not diverge.
+enum Platform {
+  industrials
+  petservices
+  earlyeducation
+}
+
+enum InvestorStatus {
+  PENDING
+  INVITED
+  ACTIVE
+  DISABLED
+}
+
+enum AuditAction {
+  INVESTOR_IMPORTED
+  INVITE_SENT
+  INVITE_ACCEPTED
+  DOCUMENT_UPLOADED
+  DOCUMENT_DOWNLOADED
+  DOCUMENT_ACCESS_DENIED
+  ACCESS_REVOKED
+}
+
+/// One row per authenticated person. id == Supabase auth.users.id.
+model Profile {
+  id            String     @id
+  email         String     @unique
+  role          Role
+  createdAt     DateTime   @default(now())
+  lastLoginAt   DateTime?
+  investor      Investor?
+  uploadedDocs  Document[] @relation("UploadedBy")
+  auditEvents   AuditLog[] @relation("Actor")
+}
+
+/// Business-entity record. Created by Excel import, before any login exists.
+model Investor {
+  id             String           @id @default(cuid())
+  legalName      String
+  email          String           @unique
+  status         InvestorStatus   @default(PENDING)
+  profileId      String?          @unique
+  profile        Profile?         @relation(fields: [profileId], references: [id])
+  invitedAt      DateTime?
+  invitedById    String?
+  acceptedAt     DateTime?
+  platformAccess PlatformAccess[]
+  importBatchId  String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model PlatformAccess {
+  id         String   @id @default(cuid())
+  investorId String
+  investor   Investor @relation(fields: [investorId], references: [id], onDelete: Cascade)
+  platform   Platform
+  grantedAt  DateTime @default(now())
+
+  @@unique([investorId, platform])
+}
+
+model Document {
+  id            String             @id @default(cuid())
+  title         String
+  periodLabel   String
+  storagePath   String
+  fileName      String
+  mimeType      String
+  fileSizeBytes Int
+  uploadedById  String
+  uploadedBy    Profile            @relation("UploadedBy", fields: [uploadedById], references: [id])
+  platforms     DocumentPlatform[]
+  createdAt     DateTime           @default(now())
+}
+
+model DocumentPlatform {
+  id         String   @id @default(cuid())
+  documentId String
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  platform   Platform
+
+  @@unique([documentId, platform])
+}
+
+/// Persists each Excel upload's parsed diff server-side so the commit step
+/// re-derives from what was actually parsed, not from whatever the client
+/// claims after the preview step.
+model ImportBatch {
+  id           String   @id @default(cuid())
+  uploadedById String
+  fileName     String
+  rowCount     Int
+  summary      Json
+  createdAt    DateTime @default(now())
+}
+
+model AuditLog {
+  id         String      @id @default(cuid())
+  actorId    String?
+  actor      Profile?    @relation("Actor", fields: [actorId], references: [id])
+  action     AuditAction
+  targetType String
+  targetId   String
+  metadata   Json?
+  createdAt  DateTime    @default(now())
+}
