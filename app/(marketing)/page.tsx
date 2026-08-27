@@ -1,9 +1,10 @@
-import Image from "next/image";
 import HomeHero from "@/components/HomeHero";
 import PillarGrid from "@/components/PillarGrid";
 import CompanyCard from "@/components/CompanyCard";
 import TeamSection from "@/components/TeamSection";
 import Reveal from "@/components/Reveal";
+import ScrollFadeImage from "@/components/ScrollFadeImage";
+import ContactForm from "@/components/ContactForm";
 import { companies } from "@/lib/companies";
 import { whatWeDo, whatWeBelieve, nfWay, investmentCriteria, growthFocus } from "@/lib/fund";
 import { industryIcons } from "@/components/IndustryIcons";
@@ -46,7 +47,7 @@ export default function Home() {
       <section id="our-firm" className="section scroll-mt-20 bg-cream">
         <div className="container-page">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            <Reveal>
+            <Reveal className="text-center lg:text-left">
               <p className="eyebrow mb-3">Philosophy</p>
               <h3 className="mb-6 text-3xl text-black sm:text-4xl">What We Believe.</h3>
               <p className="mb-5 text-lg font-serif text-navy">{whatWeBelieve.heading}</p>
@@ -56,12 +57,12 @@ export default function Home() {
                 ))}
               </div>
             </Reveal>
-            <Reveal delay={150} className="relative aspect-[4/3] w-full overflow-hidden">
-              <Image
-                src="/images/backgrounds/lighthouse.jpg"
-                alt="Newbury Franklin lighthouse"
-                fill
-                className="object-cover"
+            <Reveal delay={150}>
+              <ScrollFadeImage
+                base="/images/backgrounds/lighthouse-bw.png"
+                overlay="/images/backgrounds/night-light.png"
+                baseAlt="Newbury Franklin lighthouse"
+                overlayAlt="Newbury Franklin lighthouse at night, light shining"
               />
             </Reveal>
           </div>
@@ -149,22 +150,16 @@ export default function Home() {
         style={{ backgroundImage: "linear-gradient(rgba(248,244,244,.9),rgba(248,244,244,.9)), url('/images/backgrounds/contact-bg.jpg')" }}
       >
         <Reveal className="container-page grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+          <div className="text-center lg:text-left">
             <p className="eyebrow mb-3">Get In Touch</p>
             <h3 className="mb-5 text-3xl text-black sm:text-4xl">Contact Us.</h3>
-            <p className="max-w-md text-stone">
+            <p className="mx-auto max-w-md text-stone lg:mx-0">
               Whether you&rsquo;re a business owner exploring a sale or an investor with questions about our
               approach, we&rsquo;d like to hear from you.
             </p>
           </div>
-          <div className="bg-white p-2 shadow-sm">
-            <iframe
-              src="https://go.newburyfranklin.com/l/1101372/2025-05-06/85pylk"
-              width="100%"
-              height="420"
-              title="Contact Newbury Franklin"
-              style={{ border: 0 }}
-            />
+          <div className="bg-white p-6 shadow-sm sm:p-8">
+            <ContactForm />
           </div>
         </Reveal>
       </section>

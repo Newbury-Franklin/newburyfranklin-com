@@ -67,7 +67,7 @@ export default function HomeHero() {
       </div>
       <div className="fixed inset-0 -z-10 h-screen w-screen bg-navy/45" />
       <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-transparent to-white/90 sm:h-14" />
-      <div className="container-page relative z-10">
+      <div className="container-page relative z-10 text-center sm:text-left">
         <h1 className="max-w-4xl text-2xl leading-[1.25] tracking-tight text-white sm:text-4xl lg:text-5xl">
           <span className="block">Buyers and Long-Term Builders</span>
           <span className="block">of Recurring Revenue Businesses.</span>
