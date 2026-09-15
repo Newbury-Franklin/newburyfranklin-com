@@ -53,7 +53,7 @@ export default function Header() {
             onMouseLeave={() => setPortfolioOpen(false)}
           >
             <button className={`flex items-center gap-1 ${navLinkClass}`}>
-              Portfolio
+              Companies
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className="mt-0.5">
                 <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" />
               </svg>
@@ -101,7 +101,7 @@ export default function Header() {
             <Link href="/#our-firm" className="py-2.5" onClick={() => setMobileOpen(false)}>
               Our Firm
             </Link>
-            <span className="pt-2 text-xs font-semibold uppercase tracking-widest text-stone">Portfolio</span>
+            <span className="pt-2 text-xs font-semibold uppercase tracking-widest text-stone">Companies</span>
             {companies.map((company) => (
               <Link
                 key={company.slug}

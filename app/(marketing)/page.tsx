@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 import ScrollFadeImage from "@/components/ScrollFadeImage";
 import ContactForm from "@/components/ContactForm";
 import { companies } from "@/lib/companies";
-import { whatWeDo, whatWeBelieve, nfWay, investmentCriteria, growthFocus } from "@/lib/fund";
+import { whatWeDo, ourWhy, whatWeBelieve, nfWay, investmentCriteria, growthFocus } from "@/lib/fund";
 import { industryIcons } from "@/components/IndustryIcons";
 
 function CheckIcon() {
@@ -42,6 +42,14 @@ export default function Home() {
             theme="dark"
           />
         </div>
+      </section>
+
+      <section className="section bg-white">
+        <Reveal className="container-page mx-auto max-w-2xl text-center">
+          <p className="eyebrow mb-3">Purpose</p>
+          <h3 className="mb-6 text-3xl text-black sm:text-4xl">Our Why.</h3>
+          <p className="text-lg font-serif italic leading-relaxed text-navy">{ourWhy.body}</p>
+        </Reveal>
       </section>
 
       <section id="our-firm" className="section scroll-mt-20 bg-cream">
@@ -87,7 +95,7 @@ export default function Home() {
 
       <section id="portfolio" className="section scroll-mt-20 bg-white">
         <Reveal className="container-page mb-14 text-center">
-          <p className="eyebrow mb-3">Portfolio</p>
+          <p className="eyebrow mb-3">Companies</p>
           <h3 className="text-3xl text-black sm:text-4xl">Our Companies.</h3>
         </Reveal>
         <div className="flex flex-col gap-1 px-1 sm:flex-row">
@@ -117,7 +125,7 @@ export default function Home() {
                 <Reveal
                   key={area.slug}
                   delay={i * 80}
-                  className="flex basis-[calc(50%-1rem)] flex-col items-center text-center sm:basis-[calc(33.3333%-1.3333rem)] lg:basis-[calc(20%-1.6rem)]"
+                  className="flex basis-[calc(50%-1rem)] flex-col items-center text-center sm:basis-[calc(33.3333%-1.3333rem)] lg:basis-[calc(25%-1.5rem)]"
                 >
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-gold-light">
                     <Icon />

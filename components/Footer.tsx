@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Portfolio</p>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Companies</p>
           <ul className="space-y-3 text-sm text-white/80">
             {companies.map((company) => (
               <li key={company.slug}>

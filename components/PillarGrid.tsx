@@ -40,7 +40,7 @@ export default function PillarGrid({
         {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
         <h3 className={`text-3xl sm:text-4xl ${isDark ? "text-white" : "text-black"}`}>{heading}</h3>
         {isDark && <Divider className="mx-auto my-6 max-w-[10rem]" />}
-        {intro && <p className={`mx-auto max-w-xl ${isDark ? "text-white/80" : "text-stone"}`}>{intro}</p>}
+        {intro && <p className={`mx-auto max-w-2xl ${isDark ? "text-white/80" : "text-stone"}`}>{intro}</p>}
       </Reveal>
 
       {/* Desktop: staggered wave timeline (dark theme only) */}

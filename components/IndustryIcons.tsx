@@ -50,6 +50,26 @@ function TaproomIcon() {
   );
 }
 
+function CoffeeSnackIcon() {
+  return (
+    <svg {...shared}>
+      <path d="M7 12h16l-1.5 12.2a2.2 2.2 0 0 1-2.2 1.9h-8.6a2.2 2.2 0 0 1-2.2-1.9L7 12z" />
+      <path d="M23 14.5h2a3 3 0 0 1 0 6h-2.2" />
+      <path d="M11.5 8c0-1.3.8-1.8.8-3M16 8c0-1.3.8-1.8.8-3M20.5 8c0-1.3.8-1.8.8-3" />
+    </svg>
+  );
+}
+
+function B2bServicesIcon() {
+  return (
+    <svg {...shared}>
+      <rect x="6" y="12" width="20" height="14" rx="2" />
+      <path d="M12 12V9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3" />
+      <path d="M6 18h20" />
+    </svg>
+  );
+}
+
 function YouthEnrichmentIcon() {
   return (
     <svg {...shared}>
@@ -67,4 +87,6 @@ export const industryIcons: Record<string, () => JSX.Element> = {
   "salon-barbershop": SalonBarbershopIcon,
   taproom: TaproomIcon,
   "youth-enrichment": YouthEnrichmentIcon,
+  "b2b-services": B2bServicesIcon,
+  "coffee-snack": CoffeeSnackIcon,
 };

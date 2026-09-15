@@ -73,7 +73,7 @@ export default function HomeHero() {
           <span className="block">of Recurring Revenue Businesses.</span>
         </h1>
         <a href="#portfolio" className="btn-outline mt-8">
-          View Our Portfolio
+          View Our Companies
         </a>
       </div>
     </section>

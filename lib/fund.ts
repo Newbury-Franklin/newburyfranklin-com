@@ -26,7 +26,7 @@ export const pillars: Pillar[] = [
     icon: "/images/company-icons/pillars/icon-execution.svg",
   },
   {
-    title: "Measurable Results",
+    title: "Results",
     description:
       "We track performance consistently, so progress is visible and outcomes are earned.",
     icon: "/images/company-icons/pillars/icon-results.svg",
@@ -36,29 +36,33 @@ export const pillars: Pillar[] = [
 export const nfWay = {
   title: "The NF Way.",
   intro:
-    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, the NF Way, to drive growth.",
+    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, the NF Way, to drive growth. Built on four pillars — Talent, Strategy, Execution, and Results — the NF Way draws on proven frameworks for alignment, strategy, and execution. Each Newbury Franklin business applies consistent hiring rigor, talent development, strategy & execution plans, meeting rhythm, and performance tracking.",
   outro:
     "We do not guarantee business outcomes, but we promise a consistent, earnest, and scalable approach to our work.",
 };
 
 export const whatWeDo = {
-  lede: "Newbury Franklin buys US-based businesses — multi-location today, or built for multi-location potential — and uses its operating know-how to help them grow.",
-  body: "We look for businesses with loyal customers and room for expansion. We “buy and build” companies, rather than “buy and flip” them — staying flexible on leadership changes and partnering with existing management teams to drive strong outcomes.",
+  lede: "Newbury Franklin buys US-based multi-location businesses and uses its operating know-how to help them grow.",
+  body: "We “buy and build” companies, rather than “buy and flip” them — staying flexible on leadership changes and partnering with existing management teams to drive strong outcomes.",
+};
+
+export const ourWhy = {
+  body: "Our passion is people who bet on themselves and are committed to growth through building businesses. Our goal is to help these bold leaders bring a compelling business plan to life, or handle a thoughtful ownership change, while giving investors a steady path to long-term value creation that we intend to sustain for decades.",
 };
 
 export const whatWeBelieve = {
   heading: "Enduringly great companies are built over decades, not years.",
   paragraphs: [
     "Responsible owners recognize this and set up their business for the long haul.",
-    "Guided by this principle, Newbury Franklin acquires and builds companies with no plan to sell. This mindset — and our capital structure — keeps us focused on building value over decades.",
-    "We are industry agnostic but disciplined, seeking business models and industry traits — multi-location today or with multi-location potential — that fit our criteria.",
+    "Guided by this principle, Newbury Franklin acquires and builds companies with no plan to sell. This mindset, and our capital structure, keeps us focused on building value over decades.",
+    "We are industry agnostic but disciplined — purchasing multi-location business models with industry characteristics that fit our criteria.",
   ],
 };
 
 export const investmentCriteria = {
   intro:
     "We invest in large, fragmented markets with strong consolidation fundamentals, targeting businesses that:",
-  items: ["Strong, Consistent Cash Flow", "Outstanding Revenue Retention", "Multisite Potential"],
+  items: ["Multisite (or Potential for Multi-Site)", "Outstanding Revenue Retention", "Strong, Consistent Cash Flow"],
 };
 
 export const growthFocus = {
@@ -68,10 +72,9 @@ export const growthFocus = {
     "We are also selectively evaluating new verticals with similar business model characteristics, including:",
   newAreas: [
     { name: "Automotive Services", slug: "car-wash", lines: ["Automotive", "Services"] as [string, string] },
-    { name: "Early Childhood Education", slug: "early-education", lines: ["Early Childhood", "Education"] as [string, string] },
-    { name: "Salon & Barbershop Services", slug: "salon-barbershop", lines: ["Salon & Barbershop", "Services"] as [string, string] },
-    { name: "Taproom & Craft Beverage", slug: "taproom", lines: ["Taproom & Craft", "Beverage"] as [string, string] },
+    { name: "Coffee & Snack", slug: "coffee-snack", lines: ["Coffee &", "Snack"] as [string, string] },
     { name: "Youth Enrichment Programs", slug: "youth-enrichment", lines: ["Youth Enrichment", "Programs"] as [string, string] },
+    { name: "B2B Services", slug: "b2b-services", lines: ["B2B", "Services"] as [string, string] },
   ],
 };
 
