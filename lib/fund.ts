@@ -1,34 +1,66 @@
+export type PillarBullet = {
+  label: string;
+  description: string;
+};
+
 export type Pillar = {
   title: string;
-  description: string;
+  quote: string;
+  tagline: string;
+  bullets: PillarBullet[];
   icon: string;
 };
 
 /** "The NF Way" — our operating framework, shown on the homepage and reused
- * on every portfolio page's "About Newbury Franklin" section. */
+ * on every portfolio page's "About Newbury Franklin" section. Content pulled
+ * verbatim from the "260724 NF Way 1 Page Slide" deck. */
 export const pillars: Pillar[] = [
   {
     title: "Talent",
-    description:
-      "We apply consistent hiring rigor to build strong leadership teams across every business we own.",
+    quote: "The best team wins.",
+    tagline: "Business is all about the people — a conviction, not a platitude.",
+    bullets: [
+      { label: "Accountability Map", description: "Clear lines of responsibility, CEO to front line." },
+      { label: "Talent Reviews & Development", description: "Twice-yearly reviews on values, will, and skills." },
+      { label: "Topgrading", description: "Rigorous, scorecard-driven hiring and reference checks." },
+    ],
     icon: "/images/company-icons/pillars/icon-talent.svg",
   },
   {
     title: "Strategy",
-    description:
-      "Each business operates from a clear strategy and execution plan aligned to long-term goals.",
+    quote: "Discipline equals freedom.",
+    tagline: "A proven operating system aligned around how we intend to win.",
+    bullets: [
+      { label: "Business Operating System", description: "Scaling Up / Rockefeller Habits, run with fidelity." },
+      { label: "Strategy Principles", description: "Jim Collins tools: BHAG, Hedgehog, Flywheel." },
+      {
+        label: "Executive Coach",
+        description: "CEO resource to implement business operating system and strategy principles.",
+      },
+    ],
     icon: "/images/company-icons/pillars/icon-strategy.svg",
   },
   {
     title: "Execution",
-    description:
-      "A disciplined meeting rhythm keeps teams aligned and accountable to the plan.",
+    quote: "Routine sets you free.",
+    tagline: "We are on a 20-year march, systematic in what we control.",
+    bullets: [
+      {
+        label: "Essential Meeting Rhythm",
+        description: "A cadence ranging from daily huddles to annual resets keeps us aligned.",
+      },
+      { label: "World-Class Boards", description: "Experienced directors challenge us every quarter." },
+    ],
     icon: "/images/company-icons/pillars/icon-execution.svg",
   },
   {
     title: "Results",
-    description:
-      "We track performance consistently, so progress is visible and outcomes are earned.",
+    quote: "What gets measured gets done.",
+    tagline: "A scoreboard everyone understands and performs against.",
+    bullets: [
+      { label: "KPI Scorecard", description: "Critical numbers, reviewed daily, with a single owner for each." },
+      { label: "Robust Reporting", description: "Strong finance functions; timely, accurate numbers." },
+    ],
     icon: "/images/company-icons/pillars/icon-results.svg",
   },
 ];
@@ -36,7 +68,7 @@ export const pillars: Pillar[] = [
 export const nfWay = {
   title: "The NF Way.",
   intro:
-    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, the NF Way, to drive growth. Built on four pillars — Talent, Strategy, Execution, and Results — the NF Way draws on proven frameworks for alignment, strategy, and execution. Each Newbury Franklin business applies consistent hiring rigor, talent development, strategy & execution plans, meeting rhythm, and performance tracking.",
+    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, the NF Way, to drive growth. We are dogmatic about building a cohesive firm — not a portfolio of disparate assets — using a consistent operating system, built on four enduring pillars.",
   outro:
     "We do not guarantee business outcomes, but we promise a consistent, earnest, and scalable approach to our work.",
 };

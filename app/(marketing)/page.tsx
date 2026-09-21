@@ -39,7 +39,6 @@ export default function Home() {
             heading={nfWay.title}
             intro={nfWay.intro}
             outro={nfWay.outro}
-            theme="dark"
           />
         </div>
       </section>

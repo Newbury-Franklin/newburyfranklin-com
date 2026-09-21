@@ -51,5 +51,8 @@ next-env.d.ts
 /public/videos/early education.mp4
 /public/videos/performance-arts-hero.mp4
 
+# internal reference material, not a site asset
+/public/260724_NF_Way_1 Page Slide.pptx
+
 .vercel
 .env*

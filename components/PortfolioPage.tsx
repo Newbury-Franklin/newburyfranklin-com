@@ -51,7 +51,6 @@ export default function PortfolioPage({ slug }: { slug: Company["slug"] }) {
             eyebrow="How We Operate"
             heading={nfWay.title}
             intro={nfWay.intro}
-            theme="dark"
           />
         </div>
       </section>
