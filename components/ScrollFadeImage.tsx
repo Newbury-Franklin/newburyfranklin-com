@@ -3,13 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const FEATHER = 35; // width (in % of image width) of the soft transition band
+const FADE_MS = 2000;
+
 /**
- * Stacks an overlay image over a base image, revealing the overlay left-to-
- * right as the user scrolls through it: fully hidden until the entire photo
- * has scrolled into view (its bottom edge reaches the bottom of the
- * viewport), then sweeping into view (soft-edged, left to right) until the
- * photo's vertical center reaches the vertical center of the viewport.
+ * Stacks an overlay image over a base image. Fully hidden until the entire
+ * photo has scrolled into view (its bottom edge reaches the bottom of the
+ * viewport) — at that point it triggers once and crossfades in over a fixed
+ * FADE_MS, regardless of scroll speed. Never reverts back to the base image,
+ * even if the user scrolls back up past the trigger point.
  */
 export default function ScrollFadeImage({
   base,
@@ -23,34 +24,30 @@ export default function ScrollFadeImage({
   overlayAlt: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
+    if (revealed) return;
     const el = ref.current;
     if (!el) return;
 
-    const update = () => {
+    const check = () => {
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
       const start = vh - rect.height; // photo's bottom just reaches the bottom of the viewport
-      const end = vh / 2 - rect.height / 2; // photo's vertical center reaches the viewport's vertical center
-      const p = (start - rect.top) / (start - end);
-      setProgress(Math.min(1, Math.max(0, p)));
+      if (rect.top <= start) {
+        setRevealed(true);
+      }
     };
 
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
     return () => {
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
     };
-  }, []);
-
-  const center = -FEATHER + progress * (100 + 2 * FEATHER);
-  const maskImage = `linear-gradient(to right, black 0%, black ${center - FEATHER / 2}%, transparent ${
-    center + FEATHER / 2
-  }%, transparent 100%)`;
+  }, [revealed]);
 
   return (
     <div ref={ref} className="relative aspect-[4/3] w-full overflow-hidden">
@@ -59,8 +56,8 @@ export default function ScrollFadeImage({
         src={overlay}
         alt={overlayAlt}
         fill
-        className="object-cover"
-        style={{ WebkitMaskImage: maskImage, maskImage }}
+        className="object-cover transition-opacity ease-in-out"
+        style={{ opacity: revealed ? 1 : 0, transitionDuration: `${FADE_MS}ms` }}
       />
     </div>
   );
