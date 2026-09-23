@@ -6,6 +6,10 @@ export type Highlight = {
 
 export type Company = {
   slug: "industrials" | "petservices" | "earlyeducation";
+  /** Set to false to hide a platform from all public listings and its own
+   * page (returns 404) without deleting any of its content — e.g. before a
+   * deal has closed. Defaults to published when omitted. */
+  published?: boolean;
   name: string;
   shortName: string;
   cardDescription: string;
@@ -103,6 +107,7 @@ export const companies: Company[] = [
   },
   {
     slug: "earlyeducation",
+    published: false,
     name: "Newbury Franklin Early Education",
     shortName: "Early Education",
     cardDescription: "Acquirer and Long-Term Steward of Early Childhood Education Centers",
@@ -143,6 +148,10 @@ export const companies: Company[] = [
     sellPrompt: "Considering a Sale? We'd Like to Hear From You.",
   },
 ];
+
+/** Use for any public listing (nav, footer, homepage grid) — excludes
+ * unpublished platforms while leaving their data and pages intact. */
+export const publishedCompanies = companies.filter((company) => company.published !== false);
 
 export function getCompany(slug: Company["slug"]) {
   return companies.find((company) => company.slug === slug)!;

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { teamMembers, type TeamMember } from "@/lib/team";
+import { publishedTeamMembers, type TeamMember } from "@/lib/team";
 import BioModal from "@/components/BioModal";
 import Reveal from "@/components/Reveal";
 
@@ -12,7 +12,7 @@ export default function TeamSection() {
   return (
     <>
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-12">
-        {teamMembers.map((member, i) => (
+        {publishedTeamMembers.map((member, i) => (
           <Reveal
             key={member.slug}
             delay={(i % 3) * 100}

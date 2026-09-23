@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { companies } from "@/lib/companies";
+import { publishedCompanies } from "@/lib/companies";
 
 const LIGHT_TOP_PAGES = ["/terms-of-use"];
 
@@ -60,7 +60,7 @@ export default function Header() {
             </button>
             {portfolioOpen && (
               <div className="absolute left-0 top-full w-56 border-t-2 border-gold bg-white py-2 shadow-lg">
-                {companies.map((company) => (
+                {publishedCompanies.map((company) => (
                   <Link
                     key={company.slug}
                     href={`/${company.slug}`}
@@ -102,7 +102,7 @@ export default function Header() {
               Our Firm
             </Link>
             <span className="pt-2 text-xs font-semibold uppercase tracking-widest text-stone">Companies</span>
-            {companies.map((company) => (
+            {publishedCompanies.map((company) => (
               <Link
                 key={company.slug}
                 href={`/${company.slug}`}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { fundContact } from "@/lib/fund";
-import { companies } from "@/lib/companies";
+import { publishedCompanies } from "@/lib/companies";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -51,7 +51,7 @@ export default function Footer() {
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">Companies</p>
           <ul className="space-y-3 text-sm text-white/80">
-            {companies.map((company) => (
+            {publishedCompanies.map((company) => (
               <li key={company.slug}>
                 <Link href={`/${company.slug}`} className="hover:text-white">
                   {company.shortName}

@@ -5,7 +5,7 @@ import TeamSection from "@/components/TeamSection";
 import Reveal from "@/components/Reveal";
 import ScrollFadeImage from "@/components/ScrollFadeImage";
 import ContactForm from "@/components/ContactForm";
-import { companies } from "@/lib/companies";
+import { publishedCompanies } from "@/lib/companies";
 import { whatWeDo, ourWhy, whatWeBelieve, nfWay, investmentCriteria, growthFocus } from "@/lib/fund";
 import { industryIcons } from "@/components/IndustryIcons";
 
@@ -98,7 +98,7 @@ export default function Home() {
           <h3 className="text-3xl text-black sm:text-4xl">Our Companies.</h3>
         </Reveal>
         <div className="flex flex-col gap-1 px-1 sm:flex-row">
-          {companies.map((company, i) => (
+          {publishedCompanies.map((company, i) => (
             <Reveal key={company.slug} delay={i * 120} className="flex flex-1">
               <CompanyCard company={company} />
             </Reveal>
