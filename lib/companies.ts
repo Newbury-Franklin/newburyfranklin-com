@@ -107,7 +107,6 @@ export const companies: Company[] = [
   },
   {
     slug: "earlyeducation",
-    published: false,
     name: "Newbury Franklin Early Education",
     shortName: "Early Education",
     cardDescription: "Acquirer and Long-Term Steward of Early Childhood Education Centers",

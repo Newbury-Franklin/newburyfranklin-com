@@ -94,7 +94,6 @@ export const teamMembers: TeamMember[] = [
   },
   {
     slug: "mg-shapiro",
-    published: false,
     name: "M.G. Shapiro",
     titles: ["CEO, Early Education"],
     cardTitleLines: ["CEO,", "Early Education"],
