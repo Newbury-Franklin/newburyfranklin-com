@@ -24,7 +24,7 @@ export const teamMembers: TeamMember[] = [
     bio: [
       "Mark Anderegg is Co-Founder and CEO of Newbury Franklin. He sets the firm’s investment strategy and partners directly with leadership teams across Newbury Franklin’s companies on growth, capital allocation, and governance, with a focus on building value over decades rather than a typical hold period.",
       "Mark began his career as an investment banker at Goldman Sachs before moving into private equity. In 2012, he acquired Little Sprouts, a Boston-based childcare provider, and served as CEO for six years, growing it into the largest independent childcare company in New England before stepping down to co-found Newbury Franklin with Kevin Brady.",
-      "Mark holds a B.A. in Economics from Vanderbilt University and an MBA from the Kellogg School of Management at Northwestern University. He is also an Adjunct Professor at the Tuck School of Business at Dartmouth College. Mark has three children and splits his time between Newburyport, MA and Gates Mills, OH.",
+      "Mark holds a B.A. in Economics from Vanderbilt University and an MBA from the Kellogg School of Management at Northwestern University. He is also an Adjunct Professor at the Tuck School of Business at Dartmouth College. Mark and his wife, April, have six children and split time between Newburyport, MA and Shaker Heights, OH.",
     ],
   },
   {
