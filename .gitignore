@@ -51,9 +51,10 @@ next-env.d.ts
 /public/videos/early education.mp4
 /public/videos/performance-arts-hero.mp4
 
-# internal reference material, not a site asset
-/public/260724_NF_Way_1 Page Slide.pptx
-/public/images/Mark Ref.png
+# internal reference material, not a site asset — moved out of /public
+# entirely (not just gitignored) since static export copies everything
+# under /public verbatim into the deployed build regardless of git status
+/reference-material
 
 .vercel
 .env*

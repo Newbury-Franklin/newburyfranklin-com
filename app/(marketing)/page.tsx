@@ -1,12 +1,12 @@
+import Image from "next/image";
 import HomeHero from "@/components/HomeHero";
 import PillarGrid from "@/components/PillarGrid";
 import CompanyCard from "@/components/CompanyCard";
 import TeamSection from "@/components/TeamSection";
 import Reveal from "@/components/Reveal";
 import ScrollFadeImage from "@/components/ScrollFadeImage";
-import ContactForm from "@/components/ContactForm";
 import { publishedCompanies } from "@/lib/companies";
-import { whatWeDo, ourWhy, whatWeBelieve, nfWay, investmentCriteria, growthFocus } from "@/lib/fund";
+import { whatWeDo, ourWhy, whatWeBelieve, nfWay, investmentCriteria, growthFocus, fundContact } from "@/lib/fund";
 import { industryIcons } from "@/components/IndustryIcons";
 
 function CheckIcon() {
@@ -165,8 +165,29 @@ export default function Home() {
               approach, we&rsquo;d like to hear from you.
             </p>
           </div>
-          <div className="bg-white p-6 shadow-sm sm:p-8">
-            <ContactForm />
+          <div className="flex flex-col gap-6 bg-white p-6 shadow-sm sm:p-8">
+            <a href={`mailto:${fundContact.email}`} className="group flex items-center gap-4">
+              <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy">
+                <div className="relative h-5 w-5">
+                  <Image src="/images/company-icons/contact/icon-email.png" alt="" fill className="object-contain" />
+                </div>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wide text-stone">Email</p>
+                <p className="font-medium text-navy group-hover:text-gold-dark">{fundContact.email}</p>
+              </div>
+            </a>
+            <div className="flex items-center gap-4">
+              <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy">
+                <div className="relative h-5 w-5">
+                  <Image src="/images/company-icons/contact/icon-phone.png" alt="" fill className="object-contain" />
+                </div>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wide text-stone">Phone</p>
+                <p className="font-medium text-navy">{fundContact.phone}</p>
+              </div>
+            </div>
           </div>
         </Reveal>
       </section>

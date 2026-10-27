@@ -113,4 +113,5 @@ export const growthFocus = {
 export const fundContact = {
   address: ["4 Inn Street", "Newburyport, MA 01950"],
   phone: "(978) 225-0663",
+  email: "rebecca@newburyfranklin.com",
 };
