@@ -124,7 +124,7 @@ export default function Home() {
                 <Reveal
                   key={area.slug}
                   delay={i * 80}
-                  className="flex basis-[calc(50%-1rem)] flex-col items-center text-center sm:basis-[calc(33.3333%-1.3333rem)] lg:basis-[calc(25%-1.5rem)]"
+                  className="flex basis-[calc(50%-1rem)] flex-col items-center text-center sm:basis-[calc(33.3333%-1.3333rem)]"
                 >
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-gold-light">
                     <Icon />

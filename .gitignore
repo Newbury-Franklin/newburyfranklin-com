@@ -53,6 +53,7 @@ next-env.d.ts
 
 # internal reference material, not a site asset
 /public/260724_NF_Way_1 Page Slide.pptx
+/public/images/Mark Ref.png
 
 .vercel
 .env*

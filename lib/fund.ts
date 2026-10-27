@@ -18,7 +18,7 @@ export const pillars: Pillar[] = [
   {
     title: "Talent",
     quote: "The best team wins.",
-    tagline: "Business is all about the people — a conviction, not a platitude.",
+    tagline: "Business is all about the people: a conviction, not a platitude.",
     bullets: [
       { label: "Accountability Map", description: "Clear lines of responsibility, CEO to front line." },
       { label: "Talent Reviews & Development", description: "Twice-yearly reviews on values, will, and skills." },
@@ -28,14 +28,14 @@ export const pillars: Pillar[] = [
   },
   {
     title: "Strategy",
-    quote: "Discipline equals freedom.",
+    quote: "Remove the guesswork.",
     tagline: "A proven operating system aligned around how we intend to win.",
     bullets: [
       { label: "Business Operating System", description: "Scaling Up / Rockefeller Habits, run with fidelity." },
       { label: "Strategy Principles", description: "Jim Collins tools: BHAG, Hedgehog, Flywheel." },
       {
         label: "Executive Coach",
-        description: "CEO resource to implement business operating system and strategy principles.",
+        description: "CEO resource to implement the operating system and strategy principles.",
       },
     ],
     icon: "/images/company-icons/pillars/icon-strategy.svg",
@@ -47,7 +47,7 @@ export const pillars: Pillar[] = [
     bullets: [
       {
         label: "Essential Meeting Rhythm",
-        description: "A cadence ranging from daily huddles to annual resets keeps us aligned.",
+        description: "A cadence from daily huddles to annual resets keeps us aligned.",
       },
       { label: "World-Class Boards", description: "Experienced directors challenge us every quarter." },
     ],
@@ -60,6 +60,7 @@ export const pillars: Pillar[] = [
     bullets: [
       { label: "KPI Scorecard", description: "Critical numbers, reviewed daily, with a single owner for each." },
       { label: "Robust Reporting", description: "Strong finance functions; timely, accurate numbers." },
+      { label: "Annual Audit", description: "Sharpen the sword every year with a review of fidelity to each pillar." },
     ],
     icon: "/images/company-icons/pillars/icon-results.svg",
   },
@@ -68,7 +69,7 @@ export const pillars: Pillar[] = [
 export const nfWay = {
   title: "The NF Way.",
   intro:
-    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, the NF Way, to drive growth. We are dogmatic about building a cohesive firm — not a portfolio of disparate assets — using a consistent operating system, built on four enduring pillars.",
+    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, The NF Way, to drive growth. We are dogmatic about building a cohesive firm — not a portfolio of disparate assets — using a consistent operating system, built on four enduring pillars.",
   outro:
     "We do not guarantee business outcomes, but we promise a consistent, earnest, and scalable approach to our work.",
 };
@@ -79,7 +80,7 @@ export const whatWeDo = {
 };
 
 export const ourWhy = {
-  body: "Our passion is people who bet on themselves and are committed to growth through building businesses. Our goal is to help these bold leaders bring a compelling business plan to life, or handle a thoughtful ownership change, while giving investors a steady path to long-term value creation that we intend to sustain for decades.",
+  body: "We believe the world is made better by the rare breed of people who have the gumption to bet on themselves. We consider it a profound privilege to be in their corner as they undertake their life’s work to build an enduring business that future generations will be proud of.",
 };
 
 export const whatWeBelieve = {
@@ -103,7 +104,6 @@ export const growthFocus = {
   newAreasIntro:
     "We are also selectively evaluating new verticals with similar business model characteristics, including:",
   newAreas: [
-    { name: "Automotive Services", slug: "car-wash", lines: ["Automotive", "Services"] as [string, string] },
     { name: "Coffee & Snack", slug: "coffee-snack", lines: ["Coffee &", "Snack"] as [string, string] },
     { name: "Youth Enrichment Programs", slug: "youth-enrichment", lines: ["Youth Enrichment", "Programs"] as [string, string] },
     { name: "B2B Services", slug: "b2b-services", lines: ["B2B", "Services"] as [string, string] },

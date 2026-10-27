@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import type { TeamMember } from "@/lib/team";
 
 export default function BioModal({ member, onClose }: { member: TeamMember; onClose: () => void }) {
@@ -15,7 +16,11 @@ export default function BioModal({ member, onClose }: { member: TeamMember; onCl
     };
   }, [onClose]);
 
-  return (
+  // Portaled to <body> so this "fixed, full-viewport" overlay is never
+  // confined by an ancestor's transform (e.g. Reveal's translate-y
+  // utilities), which would otherwise break `position: fixed` and shrink
+  // the overlay down to that ancestor's box instead of the real viewport.
+  return createPortal(
     <div
       className="fixed inset-0 z-[60] flex items-center justify-center bg-navy/80 p-4 sm:p-8"
       onClick={onClose}
@@ -68,6 +73,7 @@ export default function BioModal({ member, onClose }: { member: TeamMember; onCl
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
