@@ -35,8 +35,8 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/kevin-brady.jpg",
     isPlaceholderBio: false,
     bio: [
-      "Kevin Brady is Co-Founder and President of Newbury Franklin. He founded Newbury Franklin with Mark Anderegg to partner with high-quality entrepreneurs and businesses to reach their highest potential over decades.",
-      "Kevin began his career as an investment banker at Bank of America before joining The Wicks Group, a middle-market private equity firm, where he supported acquisitions, financings, and operations as Vice President. In 2015, he helped lead Wicks’ investment in Little Sprouts and later moved from investor to operator, joining as CFO & Head of Business Development before serving on its board through 2020.",
+      "Kevin Brady is Co-Founder and President of Newbury Franklin. He sets the firm’s investment strategy and leads execution, partnering directly with leadership teams across Newbury Franklin’s companies with a focus on capital allocation over a decades-long investment horizon. He also serves on the board of each Newbury Franklin company.",
+      "Kevin began his career as an investment banker at Bank of America before joining The Wicks Group, a middle-market private equity firm, where he supported acquisitions, financings, and operations as Vice President. In 2015, he helped lead Wicks’ investment in Little Sprouts and later moved from investor to operator, joining the company as CFO and Head of Business Development and serving on its board through 2020. He then co-founded Newbury Franklin with Mark Anderegg.",
       "Kevin holds a B.S. in Finance from the Carroll School of Management at Boston College. He lives in Franklin Lakes, NJ, with his wife and three children.",
     ],
   },
