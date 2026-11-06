@@ -45,7 +45,7 @@ export const companies: Company[] = [
     highlights: [
       {
         title: "Fasteners, Hardware & Fittings",
-        description: "Fasteners, hardware, and fittings are the small parts that hold bigger assemblies together — and NFI backs the asset-light manufacturers who supply them.",
+        description: "Fasteners, hardware, and fittings are the small parts that hold bigger assemblies together, and NFI backs the asset-light manufacturers who supply them.",
         icon: "/images/company-icons/industrials/icon-hardware.svg",
       },
       {
@@ -116,7 +116,7 @@ export const companies: Company[] = [
     hero: { type: "video", src: "/videos/earlyeducation-hero.mp4" },
     about: [
       "Newbury Franklin Early Education partners with exceptional early childhood education leaders to build enduring organizations that deliver outstanding experiences for children, families, and educators.",
-      "We invest in centers with strong reputations for quality and care, providing the operational expertise, technology, and resources to support long-term growth — without compromising the culture and community relationships that made them successful.",
+      "We invest in centers with strong reputations for quality and care, providing the operational expertise, technology, and resources to support long-term growth, without compromising the culture and community relationships that made them successful.",
     ],
     highlightsHeading: "Why NF Early Education.",
     highlights: [

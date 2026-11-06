@@ -69,14 +69,14 @@ export const pillars: Pillar[] = [
 export const nfWay = {
   title: "The NF Way.",
   intro:
-    "We have been business leaders ourselves, not just investors — and that’s what we bring to the table as partners. We use a proven approach, The NF Way, to drive growth. We are dogmatic about building a cohesive firm — not a portfolio of disparate assets — using a consistent operating system, built on four enduring pillars.",
+    "We have been business leaders ourselves, not just investors, and that’s what we bring to the table as partners. We use a proven approach, The NF Way, to drive growth. We are dogmatic about building a cohesive firm (not a portfolio of disparate assets) using a consistent operating system, built on four enduring pillars.",
   outro:
     "We do not guarantee business outcomes, but we promise a consistent, earnest, and scalable approach to our work.",
 };
 
 export const whatWeDo = {
   lede: "Newbury Franklin buys US-based multi-location businesses and uses its operating know-how to help them grow.",
-  body: "We “buy and build” companies, rather than “buy and flip” them — staying flexible on leadership changes and partnering with existing management teams to drive strong outcomes.",
+  body: "We “buy and build” companies, rather than “buy and flip” them, staying flexible on leadership changes and partnering with existing management teams to drive strong outcomes.",
 };
 
 export const ourWhy = {
@@ -88,7 +88,7 @@ export const whatWeBelieve = {
   paragraphs: [
     "Responsible owners recognize this and set up their business for the long haul.",
     "Guided by this principle, Newbury Franklin acquires and builds companies with no plan to sell. This mindset, and our capital structure, keeps us focused on building value over decades.",
-    "We are industry agnostic but disciplined — purchasing multi-location business models with industry characteristics that fit our criteria.",
+    "We are industry agnostic but disciplined, purchasing multi-location business models with industry characteristics that fit our criteria.",
   ],
 };
 

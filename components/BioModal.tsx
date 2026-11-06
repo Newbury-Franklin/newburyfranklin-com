@@ -62,7 +62,7 @@ export default function BioModal({ member, onClose }: { member: TeamMember; onCl
             )}
             {member.isPlaceholderBio && (
               <p className="mt-4 inline-block rounded-sm bg-gold-light/40 px-3 py-1 text-xs font-medium text-gold-dark">
-                Draft bio — pending final copy
+                Draft bio (pending final copy)
               </p>
             )}
             <div className="mt-5 space-y-4 text-sm leading-relaxed text-stone">
